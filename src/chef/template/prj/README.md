@@ -17,12 +17,12 @@ have to install in administrative mode.
 
 ### Using poetry
 ```
-poetry add git+https://github.com/kkibria/{{__target__}}.git
+poetry add git+https://github.com/{{github_user}}/{{__target__}}.git
 ```
 
 ### Using pip
 ```
-pip install {{__target__}}@git+https://github.com/kkibria/{{__target__}}.git
+pip install {{__target__}}@git+https://github.com/{{github_user}}/{{__target__}}.git
 ```
 
 Without the administrative privilege, you can install it in a virtual
