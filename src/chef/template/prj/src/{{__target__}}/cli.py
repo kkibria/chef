@@ -14,6 +14,7 @@ def build(dstpath, params):
             return
     g = MyGen(get_template_path())
     g.update_params(params)
+    g.exclude_add('__pycache__'.split())
     g.run(dst)
 
 def main():
