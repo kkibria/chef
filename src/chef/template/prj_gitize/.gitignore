@@ -1,0 +1,5 @@
+# pre injected: {{pre_injected}}
+
+.venv/
+dist/
+__pycache__/

@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "chef"
+version = "0.1.0"
+description = "Creates a git initialized poetry project"
+authors = ["Khan Kibria <khan.kibria@gmail.com>"]
+readme = "README.md"
+packages = [{include = "chef", from = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+prj-gen = {git = "https://github.com/kkibria/prj-gen.git"}
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+chef = "chef.cli:main"

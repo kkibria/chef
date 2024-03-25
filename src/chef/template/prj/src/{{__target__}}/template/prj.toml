@@ -1,0 +1,2 @@
+[config]
+licfile = {prompt="Want LICENSE.txt?", yesno=true, default=false}

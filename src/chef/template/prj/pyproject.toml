@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "{{__target__}}"
+version = "0.1.0"
+description = "{{description}}"
+authors = ["{{__user__}} {{__email__}}"]
+readme = "README.md"
+packages = [{include = "{{__target__}}", from = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+prj-gen = {git = "https://github.com/kkibria/prj-gen.git"}
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+{{__target__}} = "{{__target__}}.cli:main"
