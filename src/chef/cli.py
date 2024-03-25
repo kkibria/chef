@@ -32,11 +32,14 @@ def main():
     args = parser.parse_args()
     params["force"] = args.force
 
-    # set_warnigs_hook()
-    # try:
-    build(args.path, params)
-    # except Exception as e:
-    #     print(f'{e.__class__.__name__}:', *e.args)
-    #     return 1
+    set_warnigs_hook()
+    try:
+        build(args.path, params)
+    except Exception as e:
+        print(f'{e.__class__.__name__}:', *e.args)
+        return 1
+
+    print(f'"{args.path}" has been created. Run poetry install from')
+    print(f'inside "{args.path}" to get all the dependencies installed.')
     
     return 0
