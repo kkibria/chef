@@ -4,7 +4,10 @@ version = "0.1.0"
 description = "{{description}}"
 authors = ["{{__user__}} <{{__email__}}>"]
 readme = "README.md"
-packages = [{include = "{{__target__}}", from = "src"}]
+packages = [
+    {include = "{{__target__}}", from = "src"},
+    {include = "template", from = ".", to ="{{__target__}}"},
+]
 
 [tool.poetry.dependencies]
 python = "^3.10"
