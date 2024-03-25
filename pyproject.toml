@@ -4,7 +4,10 @@ version = "0.1.0"
 description = "Builds a project builder"
 authors = ["Khan Kibria <khan.kibria@gmail.com>"]
 readme = "README.md"
-packages = [{include = "chef", from = "src"}]
+packages = [
+    {include = "chef", from = "src"},
+    {include = "template", from = ".", to ="chef"},
+]
 
 [tool.poetry.dependencies]
 python = "^3.10"
