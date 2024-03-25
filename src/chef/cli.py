@@ -1,8 +1,10 @@
+import argparse
 from pathlib import Path
 from warnings import warn
+
 from . import get_template_path, set_warnigs_hook
 from .hook import MyGen
-import argparse
+
 
 def build(dstpath, params):
     dst = Path(dstpath)

@@ -1,6 +1,8 @@
-from prj_gen.generator import Gen, PARAM_TARGET
 from prj_gen.common import get_license
+from prj_gen.generator import PARAM_TARGET, Gen
+
 from .external import run_cmd
+
 
 class MyGen(Gen):
     @classmethod
