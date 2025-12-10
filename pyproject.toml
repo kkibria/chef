@@ -1,21 +1,36 @@
-[tool.poetry]
+[project]
 name = "chef"
 version = "0.1.0"
 description = "Builds a project builder"
-authors = ["Khan Kibria <khan.kibria@gmail.com>"]
+authors = [{ name = "Khan Kibria", email = "khan.kibria@gmail.com" }]
+requires-python = ">=3.10,<4"
 readme = "README.md"
-packages = [
-    {include = "chef", from = "src"},
-    {include = "template", from = ".", to ="chef"},
+dependencies = ["prj-gen"]
+
+[project.scripts]
+chef = "chef.cli:main"
+
+[tool.uv]
+
+[tool.uv.sources]
+prj-gen = { git = "https://github.com/kkibria/prj-gen.git" }
+
+[tool.hatch.build.targets.sdist]
+include = [
+    "src/chef",
+    "./template",
 ]
 
-[tool.poetry.dependencies]
-python = "^3.10"
-prj-gen = {git = "https://github.com/kkibria/prj-gen.git"}
+[tool.hatch.build.targets.wheel]
+include = [
+    "src/chef",
+    "./template",
+]
+
+[tool.hatch.build.targets.wheel.sources]
+"src/chef" = "chef"
+"./template" = "chef/template"
 
 [build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
-
-[tool.poetry.scripts]
-chef = "chef.cli:main"
+requires = ["hatchling"]
+build-backend = "hatchling.build"
