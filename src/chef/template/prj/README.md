@@ -15,9 +15,9 @@ This tool is built with [`chef`](https://github.com/kkibria/chef) which uses
 `path` already. Recommended way is to install `{{__target__}}` globally and you will
 have to install in administrative mode.
 
-### Using poetry
+### Using uv
 ```
-poetry add git+https://github.com/{{github_user}}/{{__target__}}.git
+uv tool -n install  git+https://github.com/{{github_user}}/{{__target__}}.git
 ```
 
 ### Using pip

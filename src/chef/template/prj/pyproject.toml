@@ -1,18 +1,19 @@
 [project]
-name = "chef"
+name = "{{__target__}}"
 version = "0.1.0"
-description = "Builds a project builder"
+description = "{{description}}"
 readme = "README.md"
 authors = [
-    { name = "Khan Kibria", email = "khan.kibria@gmail.com" }
+    { name = "{{__user__}}", email = "{{__email__}}" }
 ]
+
 requires-python = ">=3.14"
 dependencies = [
     "prj-gen",
 ]
 
 [project.scripts]
-chef = "chef.cli:main"
+{{__target__}} = "{{__target__}}.cli:main"
 
 [build-system]
 requires = ["uv_build>=0.9.15,<0.10.0"]
