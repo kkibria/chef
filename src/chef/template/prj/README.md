@@ -11,7 +11,7 @@ This tool is built with [`chef`](https://github.com/kkibria/chef) which uses
 [`prj-gen`](https://github.com/kkibria/prj-gen) library to perform generation.
 
 ## Install
-`{{__target__}}` requires `poetry` and `git` installed in your system and added to
+`{{__target__}}` requires `uv` and `git` installed in your system and added to
 `path` already. Recommended way is to install `{{__target__}}` globally and you will
 have to install in administrative mode.
 
